@@ -3,9 +3,6 @@
 #include <string.h>
 #include <math.h>
 
-// ====================== FUNGSI LISTRIK ======================
-
-// Fungsi untuk Hukum Ohm
 void hukumOhm() {
 char pilih;
 double V, I, R;
@@ -44,7 +41,6 @@ switch(pilih) {
 
 }
 
-// Fungsi untuk Kalkulator Daya
 void dayaListrik() {
 double V, I, P;
 printf("--- Kalkulator Daya Listrik (P = V * I) ---\n");
@@ -56,7 +52,6 @@ P = V * I;
 printf("Daya (P) = %.2lf Watt\n", P);
 }
 
-// Fungsi untuk Resistor Seri
 void resistorSeri() {
 int n,i;
 double total = 0, R;
@@ -71,7 +66,6 @@ total += R;
 printf("Total Hambatan Seri = %.2lf Ohm\n", total);
 }
 
-// Fungsi untuk Resistor Paralel
 void resistorParalel() {
 int n, i;
 double total = 0, R;
@@ -86,9 +80,6 @@ total += 1.0 / R;
 printf("Total Hambatan Paralel = %.2lf Ohm\n", 1.0 / total);
 }
 
-// ====================== FUNGSI KONVERSI ======================
-
-// Fungsi Desimal ke Biner
 void desimalKeBiner(int n) {
 int bin[65], i = 0;
 if (n == 0) { printf("0"); return; }
@@ -101,7 +92,6 @@ printf("%d", bin[j]);
 }
 }
 
-// Fungsi konversi Desimal ke Biner/Oktal/Heksadesimal
 void desimalKeBasis() {
 int n;
 printf("--- Konversi dari Desimal ---\n");
@@ -112,7 +102,6 @@ printf("Oktal       : %o\n", n);
 printf("Heksadesimal: %X\n", n);
 }
 
-// Fungsi Biner ke Desimal
 void binerKeDesimal() {
 char bin[65];
 long long decimal = 0;
@@ -125,7 +114,6 @@ decimal = decimal * 2 + (bin[i] - '0');
 printf("Hasil Desimal = %lld\n", decimal);
 }
 
-// Fungsi Oktal ke Desimal
 void oktalKeDesimal() {
 char oct[65];
 long long decimal = 0;
@@ -138,7 +126,6 @@ decimal = decimal * 8 + (oct[i] - '0');
 printf("Hasil Desimal = %lld\n", decimal);
 }
 
-// Fungsi Heksadesimal ke Desimal
 void heksaKeDesimal() {
 char hex[65];
 long long decimal = 0;
@@ -157,7 +144,7 @@ decimal = decimal * 16 + val;
 printf("Hasil Desimal = %lld\n", decimal);
 }
 
-// ====================== MAIN PROGRAM ======================
+
 int main() {
 int pilih;
 do {
@@ -193,3 +180,4 @@ switch(pilih) {
 return 0;
 
 }
+
